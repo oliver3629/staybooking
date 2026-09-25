@@ -1,5 +1,6 @@
 package com.laioffer.staybooking;
 
+import com.laioffer.staybooking.authentication.UserAlreadyExistException;
 import com.laioffer.staybooking.booking.DeleteBookingNotAllowedException;
 import com.laioffer.staybooking.booking.InvalidBookingException;
 import com.laioffer.staybooking.booking.ListingBookingsNotAllowedException;
@@ -79,5 +80,13 @@ public class GlobalControllerExceptionHandler {
                 ex.getMessage(),
                 "invalid_address_error"),
                 HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(UserAlreadyExistException.class)
+    public final ResponseEntity<ErrorResponse> handleException(UserAlreadyExistException ex) {
+        return new ResponseEntity<>(new ErrorResponse(
+                ex.getMessage(),
+                "user_already_exist"),
+                HttpStatus.CONFLICT);
     }
 }

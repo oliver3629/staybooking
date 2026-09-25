@@ -23,8 +23,15 @@ spring:
       mode: always
       schema-locations: "classpath:postgis_extension.sql"
 
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+
 staybooking:
   gcs:
     bucket: ${GCS_BUCKET}
   geocoding:
     key: ${GEOCODING_API_KEY}
+  jwt:
+    secret-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY
