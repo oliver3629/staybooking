@@ -32,6 +32,6 @@ staybooking:
   gcs:
     bucket: ${GCS_BUCKET}
   geocoding:
-    key: ${GEOCODING_API_KEY}
+    key: ${GEOCODING_KEY}
   jwt:
-    secret-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY
+    secret-key: ${JWT_SECRET_KEY}
