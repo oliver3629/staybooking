@@ -22,3 +22,9 @@ spring:
     init:
       mode: always
       schema-locations: "classpath:postgis_extension.sql"
+
+staybooking:
+  gcs:
+    bucket: ${GCS_BUCKET}
+  geocoding:
+    key: ${GEOCODING_API_KEY}
