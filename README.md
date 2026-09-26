@@ -1,4 +1,6 @@
-# Staybooking Backend
+# StayBooking Backend
+
+The Project Frontend is in the [StayBooking_Frontend](https://github.com/oliver3629/staysbookingfe).
 
 Spring Boot backend for user authentication, stay listings, listing search, and bookings. It also supports image uploads and address geocoding.
 
